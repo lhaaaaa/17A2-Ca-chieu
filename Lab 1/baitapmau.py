@@ -62,8 +62,8 @@ import math
 #print("Chu vi và diện tích của tam giác lần lượt là {} và {}".format(d, s))
 
 #Bài 10
-x, y = map(float, input("Nhập 2 giá trị x, y").split())
-tu = math.sin(x)
-mau = (2*x+y)/math.cos(x) - x**y/(x-y)
-f_x_y = tu/mau
-print("Giá trị biểu thức là", f_x_y)
+#x, y = map(float, input("Nhập 2 giá trị x, y").split())
+#tu = math.sin(x)
+#mau = (2*x+y)/math.cos(x) - x**y/(x-y)
+#f_x_y = tu/mau
+#print("Giá trị biểu thức là", f_x_y)
