@@ -46,7 +46,7 @@
 #print(danh_sach)
 
 # Không sử dụng hàm max()
-danh_sach = [6, 2, 4, 5, 9]
+#danh_sach = [6, 2, 4, 5, 9]
 #max = 0 
 #for i in danh_sach:
 #    if max < i:
@@ -58,6 +58,39 @@ danh_sach = [6, 2, 4, 5, 9]
 #danh_sach.sort()
 #danh_sach.sort(reverse = True)
 #print(danh_sach)
-a = sorted(danh_sach)
-print(danh_sach)
-print(a)
+#a = sorted(danh_sach)
+#print(danh_sach)
+#print(a)
+
+# List comprehension
+#n = int(input("Nhập số phần tử: "))
+
+#danh_sach = []
+#for i in range(n):
+#    a = input("Nhập vào giá trị: ")
+#    danh_sach.append(a)
+#print(danh_sach)
+
+#danh_sach1 = [input(f"Nhập vào giá trị thứ {i+1}: ") for i in range(n)]
+#print(danh_sach1)
+
+#danh_sach2 = [x**2 for x in range(5)]
+#print(danh_sach2)
+
+#danh_sach3 = [x**2 for x in range(5) if x % 2 == 0]
+#print(danh_sach3)
+
+# Khai báo một ma trận
+m = int(input("Nhập số hàng: "))
+n = int(input("Nhập số cột: "))
+matrix = []
+for i in range(m):
+    row = []
+    for j in range(n):
+        a = int(input(f"Nhập giá trị ở vị trí [{i}, {j}]"))
+        row.append(a)
+    matrix.append(row)
+print(matrix)
+
+print(matrix[2][0])
+
