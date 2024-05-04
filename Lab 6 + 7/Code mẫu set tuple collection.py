@@ -166,3 +166,74 @@ print(tuple2)
 #print(set1.issubset(set2))
 # issuperset -> True khi tập này là cha của tập kia
 #print(set1.issuperset(set2))
+
+#--------------------------------
+# Module collections
+# Lớp Counter
+"""
+from collections import Counter
+list_vd = [1, 2, 3, 4, 5, 1, 2, 2, 2, 3]
+tuple_vd = (1, 2, 3, 4, 5, 1, 2, 2, 2, 3)
+dict1 = Counter(list_vd)
+dict3 = Counter(tuple_vd)
+print(dict3)
+print(dict1)
+# Không sử dụng Counter
+dict2 = {}
+for i in list_vd:
+    count = 0
+    for j in list_vd:
+        if i == j:
+            count += 1
+    dict2[i] = count
+print(dict2)
+
+
+# Lớp defaultdict
+from collections import defaultdict
+dict = defaultdict(int)
+dict["Hoa"] = 9.5
+dict["Bình"] = 5.5
+print(dict)
+print(dict["An"])
+
+# Lớp deque
+from collections import deque
+my_list = []
+my_list.append(1)
+my_list.append(2)
+my_list.append(3)
+print(my_list)
+my_list.remove(my_list[0])
+print(my_list)
+
+my_deque = deque()
+my_deque.append(1)
+my_deque.append(2)
+my_deque.append(3)
+print(my_deque)
+my_deque.popleft()
+print(my_deque)
+
+# Lớp namedtuple
+from collections import namedtuple
+tp1 = ("Hoa", 15, 7.5)
+print(tp1[0])
+
+thongtin = namedtuple("thongtin", ["name", "age", "score"])
+tp2 = thongtin("Hoa", 15, 7.5)
+print(tp2.name)
+
+
+# Lớp OrderedDict
+from collections import OrderedDict
+dict1 = {}
+dict1["Hoa"] = 6.5
+dict1["Bình"] = 8.0
+print(dict1)
+
+dict2 = OrderedDict()
+dict2["Hoa"] = 6.5
+dict2["Bình"] = 8.0
+print(dict2)
+"""

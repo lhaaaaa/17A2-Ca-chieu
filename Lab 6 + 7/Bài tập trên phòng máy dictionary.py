@@ -118,7 +118,7 @@ c) Tìm kiếm nhân viên với giá trị mã nhân viên là x, với x nhậ
 d) Tăng lương 1000 cho nhân viên có mã là y, trong từ điển.
 e) Xóa nhân viên có mã là z, z nhập từ bàn phím.
 f) Sắp xếp từ điển giảm dần theo năm sinh.
-"""
+
 n = int(input("Nhập số lượng nhân viên: "))
 dict1 = {}
 i = 1 
@@ -156,3 +156,67 @@ if z in dict1:
     print("Thông tin của các nhân viên còn lại là:", dict1)
 else:
     print("Không có thông tin về nhân viên")
+"""
+
+"""
+Bài 6: 
+Thi Olympic: Giả sử một trường có n sinh viên tham gia thi Olympic Tin học 
+với các ngôn ngữ lập trình C++, Java và Python. Các sinh viên được đánh số 
+từ 1 đến n.
++ Ngôn ngữ C++ có a sinh viên dự thi, gồm các sinh vi(ên có số 
+thứ tự: t1, t2,.., tn.
++ Ngôn ngữ Java có b sinh viên dự thi, gồm các sinh viên có số 
+thứ tự : k1, k2,..., kn.
++ Ngôn ngữ Python có c sinh viên dự thi gồm các sinh viên có số 
+thứ tự: h1, h2,...., hn.
+Viết chương trình đưa ra danh sách các sinh viên chỉ thi một ngôn ngữ 
+lập trình; các sinh viên thi trên 2 ngôn ngữ lập trình và các sinh viên 
+dự thi cả 3 ngôn ngữ.
+"""
+import random
+n = int(input("Nhập số lượng sinh viên: "))
+a = int(input("Nhập số sinh viên dự thi ngôn ngữ C++: "))
+b = int(input("Nhập số sinh viên dự thi ngôn ngữ Java: "))
+c = int(input("Nhập số sinh viên dự thi ngôn ngữ Python: "))
+danh_sach_a = []
+danh_sach_b = []
+danh_sach_c = []
+if a > n or b > n or c > n:
+    print("Số sinh viên dự thi không thỏa mãn")
+else:
+    for i in range(1, a):
+        t = random.randint(1,n)
+        danh_sach_a.append(t)
+    for j in range(1, b):
+        k = random.randint(1,n)
+        danh_sach_b.append(k) 
+    for z in range(1, c):
+        h = random.randint(1,n)
+        danh_sach_c.append(h)
+print(danh_sach_a)
+print(danh_sach_b)
+print(danh_sach_c)
+danh_sach = {}
+for sv in danh_sach_a:
+    if sv in danh_sach_b and sv in danh_sach_c:
+        danh_sach[sv] = 3
+    elif sv in danh_sach_b and sv not in danh_sach_c:
+        danh_sach[sv] = 2
+    elif sv not in danh_sach_b and sv in danh_sach_c:
+        danh_sach[sv] = 2
+    elif sv not in danh_sach_b and sv not in danh_sach_c: 
+        danh_sach[sv] = 1
+print(danh_sach)
+thi_1_mon = []
+thi_2_mon = []
+thi_3_mon = []
+for sv in danh_sach:
+    if danh_sach[sv] == 1:
+        thi_1_mon.append(sv)
+    elif danh_sach[sv] == 2:
+        thi_2_mon.append(sv)
+    elif danh_sach[sv] == 3:
+        thi_3_mon.append(sv)
+print("Danh sách sinh viên thi 1 môn là:", thi_1_mon)
+print("Danh sách sinh viên thi 2 môn là:", thi_2_mon)
+print("Danh sách sinh viên thi 3 môn là:", thi_3_mon)

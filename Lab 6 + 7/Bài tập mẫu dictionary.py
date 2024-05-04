@@ -78,7 +78,7 @@ blood. This way, glucose ensures the energy which the cell needs. The quantity
 of the glucose in our blood shows us some data about our body's health. 
 Measuring blood glucose level is the most common way to control people's 
 medical condition.
-"""
+
 # Loại bỏ các dấu chấm câu
 text = text.replace(".", "")
 text = text.replace(",", "")
@@ -94,3 +94,52 @@ for i in word_list:
             count += 1
     dict1[i] = count
 print(dict1)
+"""
+
+"""
+Bài 6:
+Viết chương trình nhận phần thưởng của một lớp học: Một lớp học có k sinh 
+viên được đánh mã số sinh viên theo thứ tự từ 1 đến k. Nhà trường phát phần 
+thưởng cho sinh viên thành 2 đợt.
++ Đợt 1 gồm m sinh viên có mã số từ I1,12,... Im.
++ Đọt 2 gồm n sinh viên có số thứ tự II, II,...,IIn 
+Trong mỗi đợt phát thưởng mỗi sinh viên trong danh sách sẽ được nhận phần 
+thưởng là giấy khen và 500,000 đồng
+Thực hiện yêu cầu: Viết chương trình nhập k và danh sách các sinh viên được 
+nhận thưởng đợt 1, đợt 2.Đưa ra danh sách các sinh viên được thưởng 
+1,000,000 đồng, 500,000đ và các sinh viên không nhận được tiền thưởng.
+
+k = int(input("Nhập số từ bàn phím: "))
+m = int(input("Nhập số lượng sinh viên nhận phần thưởng đợt 1: "))
+n = int(input("Nhập số thứ tự sinh viên nhận thưởng đợt 2: "))
+dict = {}
+if m > k:
+    print("Số sinh viên nhận thưởng không thỏa mãn")
+else:
+    if n > k:
+        print("Số thứ tự không thỏa mãn")
+    else:
+        for masv in range(1, k+1):
+            tien_thuong = 0
+            if masv <= m and masv <= n:
+                tien_thuong += 1000
+            elif (masv <= m and masv > n) or (masv > m and masv <= n):
+                tien_thuong += 500
+            elif masv > m and masv > n:
+                tien_thuong = tien_thuong
+            dict[masv] = tien_thuong
+print(dict)
+tien_thuong_1000 = []
+tien_thuong_500 = []
+tien_thuong_0 = []
+for masv in dict:
+    if dict[masv] == 1000:
+        tien_thuong_1000.append(masv)
+    elif dict[masv] == 500:
+        tien_thuong_500.append(masv)
+    else:
+        tien_thuong_0.append(masv)
+print("Các bạn sinh viên nhận thưởng 1000 là:", tien_thuong_1000)
+print("Các bạn sinh viên nhận thưởng 500 là:", tien_thuong_500)
+print("Các bạn sinh viên không được nhận thưởng là:", tien_thuong_0)
+"""
