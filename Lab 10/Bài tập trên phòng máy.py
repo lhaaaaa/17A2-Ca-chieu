@@ -33,7 +33,7 @@ Xây dựng một module có tên sohoc2.py gồm các phương thức:
 + Bcnn(a,b), trả về bội số chung nhỏ nhất của 2 số nguyên a, b.
 + SumDivisor(n), trả về tổng các ước của n.
 Viết chương trình sử dụng module sohoc2.py trên.
-"""
+
 import sohoc2
 a,b = map(int, input("Nhập vào 2 số a, b: ").split())
 
@@ -48,3 +48,40 @@ print("Tổng các ước của số a là:", tong_uoc_a)
 
 tong_uoc_b = sohoc2.sumdivisor(b)
 print("Tổng các ước của số b là:", tong_uoc_b)
+"""
+
+"""
+Bài 4: 
+Xây dựng module thực hiện các việc sau:
++ Giải phương trình bậc nhất một ẩn.
++ Giải phương trình bậc hai một ẩn
+Viết chương trình sử dụng module được xây dựng ở trên.
+"""
+
+"""
+Bài 7: 
+Xây dựng một module thực hiện công việc sau:
++ Sinh ngẫu nhiên một dãy số <=100 số nguyên, hiển thị dãy số đó ra màn hình.
++ Liệt kê và hiển thị các số nguyên tố chia hết cho 7 trong dãy đó.
++ Tính tổng các số lẻ thuộc dãy đó.
++ Kiểm tra trong dãy có các số chính phương không? Nếu có hiển thị ra màn hình, ngược lại, in ra thông báo không có số chính phương trong dãy.
+Viết chương trình sử dụng module trên.
+"""
+import bai7
+
+random_numbers = bai7.sinhngaunhien()
+print("100 số ngẫu nhiên từ 1 đến 500 là: ")
+print(random_numbers)
+
+print("Các số nguyên tố chia hết cho 7 từ dãy ngẫu nhiên trên là:")
+chiacho7 = bai7.chiacho7(random_numbers)
+print(chiacho7) 
+
+print("Tổng các số lẻ trong dãy ngẫu nhiên trên là:")
+tongle = bai7.tong_le(random_numbers)
+print(tongle)
+
+print("Các số chính phương trong dãy ngẫu nhiên trên là:")
+daychinhphuong = bai7.day
+
+

@@ -33,7 +33,7 @@ def kiem_tra_so_chinh_phuong(so):
     else:
         return False
     
-def chia_het_7(random_numbers):
+def day_chinh_phuong(random_numbers):
     lst = []
     for so in random_numbers:
         if kiem_tra_so_chinh_phuong(so):
